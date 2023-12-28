@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/SourceCode/CN_FW_GEELYCX1E_MCU_BL/firmware/src/driver/src/UartDriver.c</file>
+            <file>file:/D:/SourceCode/CN_FW_GEELYCX1E_MCU_BL/firmware/src/config/default/peripheral/nvmctrl/plib_nvmctrl.c</file>
+            <file>file:/D:/SourceCode/CN_FW_GEELYCX1E_MCU_BL/firmware/src/main.c</file>
+            <file>file:/D:/SourceCode/CN_FW_GEELYCX1E_MCU_BL/firmware/src/app/src/MainApp.c</file>
+            <file>file:/D:/SourceCode/CN_FW_GEELYCX1E_MCU_BL/firmware/src/driver/src/NVMDriver.c</file>
+            <file>file:/D:/SourceCode/CN_FW_GEELYCX1E_MCU_BL/firmware/src/app/inc/MainApp.h</file>
+            <file>file:/D:/SourceCode/CN_FW_GEELYCX1E_MCU_BL/firmware/src/config/default/peripheral/sercom/usart/plib_sercom1_usart.c</file>
+            <file>file:/D:/SourceCode/CN_FW_GEELYCX1E_MCU_BL/firmware/src/app/inc/UartApp.h</file>
+            <file>file:/D:/SourceCode/CN_FW_GEELYCX1E_MCU_BL/firmware/src/main.h</file>
+            <file>file:/D:/SourceCode/CN_FW_GEELYCX1E_MCU_BL/firmware/src/app/src/UartApp.c</file>
+            <file>file:/D:/SourceCode/CN_FW_GEELYCX1E_MCU_BL/firmware/src/config/default/peripheral/nvic/plib_nvic.c</file>
+        </group>
+    </open-files>
+</project-private>
