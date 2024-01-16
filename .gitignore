@@ -1,16 +1,52 @@
-# .gitignore
+# Prerequisites
+*.d
 
-# Compiler output files
+# Object files
 *.o
-*.o.d
-
-# Objtect file
+*.ko
+*.obj
 *.elf
-*.hex
+
+# Linker output
+*.ilk
 *.map
+*.exp
 
-#LDRA temp file
-inszt_*.c
-*firmware/CN_FW_GEELYCX1E_MCU.X/.generated_files/
+# Precompiled Headers
+*.gch
+*.pch
 
-# .gitignore
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
