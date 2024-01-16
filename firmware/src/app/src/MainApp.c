@@ -28,7 +28,6 @@
 #include "driver/inc/UartDriver.h"
 #include "driver/inc/NVMDriver.h"
 #include "app/inc/UartApp.h"
-
 /* TODO:  Include other files here if needed. */
 
 
@@ -66,7 +65,7 @@ uint8_t MainApp_Boot_Mode(uint8_t u8Nothing)
     NVMDriver_Initialize();
     
     if (UART_DEBUG == 0x01){
-        sprintf((char *)u8TxBuffer,"BOOT FINISHED\r\n");
+        sprintf((char *)u8TxBuffer,"BOOT-Loader FINISHED\r\n");
         UartApp_TxWriteString(u8TxBuffer);
         //UartApp_TxWriteString((uint8_t *)"BOOT RETRY\r\n");
     }else{/*DO NOTHING*/}
@@ -82,15 +81,30 @@ uint8_t MainApp_Boot_Mode(uint8_t u8Nothing)
 uint8_t MainApp_Jump_Mode(uint8_t u8Nothing)
 {
     uint32_t u32Msp, u32ResetVector;
+    uint32_t u32data[1] = {0};
+    uint32_t ADDR_JUMP = 0U;
     int i=0U;
     if (UART_DEBUG == 0x01U && RETRY_FLAG == 0x00U){
         //Debug info
         sprintf((char *)u8TxBuffer,"Start JUMP ...\r\n");
         UartApp_TxWriteString(u8TxBuffer);
     }else{/*DO NOTHING*/}
-    
-	u32Msp = *(uint32_t *)(ADDR_APP_START);
-	u32ResetVector = *(uint32_t *)(ADDR_APP_START + 4U);
+    PortDriver_PinSet(IO_PIN_PC01);
+    while(!NVMDriver_Read(u32data,16U,0x00000FF0U));
+
+    if ((u32data[0] & 0x000000FF) == 0x0000000A){
+        UartApp_TxWriteString((uint8_t *)"Flash Jump A\r\n");
+        ADDR_JUMP = ADDR_APP_A_START;
+    }else if((u32data[0] & 0x000000FF) == 0x0000000B){
+        UartApp_TxWriteString((uint8_t *)"Flash Jump B\r\n");
+        ADDR_JUMP = ADDR_APP_B_START;
+    }else{
+        UartApp_TxWriteString((uint8_t *)"Flash != A or B\r\n");
+        ADDR_JUMP = ADDR_APP_A_START;
+    }
+
+	u32Msp = *(uint32_t *)(ADDR_JUMP);
+	u32ResetVector = *(uint32_t *)(ADDR_JUMP + 4U);
 	(void)(u32Msp);
 	(void)(u32ResetVector);
     if(u32Msp != (uint32_t)(0xFFFFFFFFU))

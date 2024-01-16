@@ -1,0 +1,16 @@
+# .gitignore
+
+# Compiler output files
+*.o
+*.o.d
+
+# Objtect file
+*.elf
+*.hex
+*.map
+
+#LDRA temp file
+inszt_*.c
+*firmware/CN_FW_GEELYCX1E_MCU.X/.generated_files/
+
+# .gitignore
