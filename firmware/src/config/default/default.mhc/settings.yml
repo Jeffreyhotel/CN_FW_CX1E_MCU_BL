@@ -1,0 +1,13 @@
+configName: default
+folderName: CN_FW_GEELYCX1E_MCU_BL
+format_version: v1.0
+frameworkPath: D:\Microchip\MCCHarmony
+processor: ATSAMC21N17A
+projectName: CN_FW_GEELYCX1E_MCU_BL
+settings:
+  PackageFilter: ''
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  TRUSTZONE: 'false'
+  MERGE_STRATEGY: USER_ALL
+  DFPPath: SAMC21_DFP\3.8.119
