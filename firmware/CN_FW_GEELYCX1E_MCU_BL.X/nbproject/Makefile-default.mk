@@ -81,31 +81,11 @@ LDLIBSOPTIONS=
 # fixDeps replaces a bunch of sed/cat/printf statements that slow down the build
 FIXDEPS=fixDeps
 
-# The following macros may be used in the pre and post step lines
-_/_=\\
-ShExtension=.bat
-Device=ATSAMC21N17A
-ProjectDir="D:\SourceCode\CN_FW_GEELYCX1E_MCU_BL\firmware\CN_FW_GEELYCX1E_MCU_BL.X"
-ProjectName=CN_FW_GEELYCX1E_MCU_BL
-ConfName=default
-ImagePath="dist\default\${IMAGE_TYPE}\CN_FW_GEELYCX1E_MCU_BL.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}"
-ImageDir="dist\default\${IMAGE_TYPE}"
-ImageName="CN_FW_GEELYCX1E_MCU_BL.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}"
-ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-IsDebug="true"
-else
-IsDebug="false"
-endif
-
 .build-conf:  ${BUILD_SUBPROJECTS}
 ifneq ($(INFORMATION_MESSAGE), )
 	@echo $(INFORMATION_MESSAGE)
 endif
 	${MAKE}  -f nbproject/Makefile-default.mk ${DISTDIR}/CN_FW_GEELYCX1E_MCU_BL.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-	@echo "--------------------------------------"
-	@echo "User defined post-build step: [${MP_CC_DIR}/xc32-objcopy -I ihex -O binary ${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.hex ${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.bin]"
-	@${MP_CC_DIR}/xc32-objcopy -I ihex -O binary ${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.hex ${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.bin
-	@echo "--------------------------------------"
 
 MP_PROCESSOR_OPTION=ATSAMC21N17A
 MP_LINKER_FILE_OPTION=,--script="..\src\config\default\ATSAMC21N17A.ld"

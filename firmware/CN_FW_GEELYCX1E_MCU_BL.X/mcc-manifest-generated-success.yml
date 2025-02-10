@@ -2,7 +2,7 @@
 
 manifest_file_version: 1.0.0
 project: CN_FW_GEELYCX1E_MCU_BL
-creation_date: 2023-12-27T11:12:00.944+08:00[Asia/Taipei]
+creation_date: 2024-03-22T15:29:11.952+08:00[Asia/Taipei]
 operating_system: Windows 10
 mcc_mode: IDE
 mcc_mode_version: v6.05
@@ -10,7 +10,7 @@ device_name: ATSAMC21N17A
 compiler: XC32 4.20
 mcc_version: 5.4.1
 mcc_core_version: 5.6.1
-content_manager_version: 4.3.1
+content_manager_version: 4.3.2
 is_mcc_offline: false
 is_using_prerelease_versions: false
 mcc_content_registries: https://registry.npmjs.org/
